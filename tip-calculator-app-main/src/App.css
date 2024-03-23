@@ -1,0 +1,238 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: "Truculenta", sans-serif;
+    font-weight: 700;
+  }
+
+  body {
+    background-color: #C5E4E7;
+  }
+
+.container {
+    /* border: 2px solid red ; */
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 3em;
+    
+}
+
+.head {
+    /* border: 2px solid blue; */
+    color: #00474b;
+    text-align: center;
+    height: 5em;
+}
+
+h1 {
+    font-size: 1.5em;
+}
+
+h2 {
+    color: #33c3b0;
+}
+
+h3 {
+    color: white;
+    font-size: 1em;
+    font-weight: 300;
+}
+
+p {
+    color: #33c3b0;
+}
+
+.calculator {
+    /* border: 2px solid green; */
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    gap: 1em;
+    padding: 1em 0 1em 0;
+    border-radius: 20px;
+    height: 20em;
+    width: 40em;
+}
+
+.bodyLeft {
+    /* border: 2px solid red; */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 45%;
+    padding: 0.5em 0 0.5em 0;
+}
+
+label {
+    color: #00474b;
+}
+
+input:not(#custom) {
+    /* background-color: #f3f8fb; */
+    width: 100%;
+    height: 2.5em;
+    margin-top: 0.5em;
+    border-radius: 5px;
+    text-align: end;
+    padding-right: 1em;
+    border: none;
+}
+
+input#bill {
+    background: #f3f8fb url('../../images/icon-dollar.svg') no-repeat 5px center;
+}
+
+input#bill:focus,
+input#people:focus,
+input#custom:focus {
+    border: 2px solid #58a69b;
+    outline: none;
+    box-shadow: 0 0 5px rgba(88, 166, 155, 0.5);
+}
+
+.errorPeople {
+    display: flex;
+    justify-content: space-between;
+    color: #d59a8c;
+}
+
+input#people {
+    background: #f3f8fb url('../../images/icon-person.svg') no-repeat 5px center;
+}
+
+.errorInput {
+    border: 2px solid #d59a8c;
+    outline: none;
+    box-shadow: 0 0 5px rgba(213, 154, 140, 0.5);
+}
+
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+
+.tipButton {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5em;
+    margin-top: 0.5em;
+}
+
+button {
+    width: 6.68em;
+    height: 2.5em;
+    color: white;
+    background-color: #00474b;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    color: #00474b;
+    background-color: #9FE8DF;
+}
+
+input#custom {
+    width: 6.68em;
+    height: 2.5em;
+    border-radius: 5px;
+    text-align: end;
+    padding-right: 1em;
+    border: none;
+    color: #00474b;
+    background-color: #f3f8fb;
+}
+
+input#custom::placeholder {
+    text-align: center;
+    padding-left: 1em;
+    font-size: 110%;
+}
+
+.bodyRight {
+    /* border: 2px solid green; */
+    background-color: #00474b;
+    width: 45%;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 1em;
+}
+
+.calculated {
+    /* border: 2px solid white; */
+    display: flex;
+    justify-content: space-between;
+    padding-top: 0.5em;
+}
+
+.resetButton {
+    /* background-color: #0d686d; disabled */
+    background-color: #9fe8df;
+    color: #00474b;
+    cursor: pointer;
+    width: 100%;
+    height: 12%;
+    margin-bottom: 0.5em;
+    font-size: 1.2em;
+    font-weight: 800;
+}
+
+@media only screen and (max-width: 425px) {
+    
+    .container {
+        /* border: 2px solid red ; */
+        flex-direction: column;
+        justify-content: flex-start;
+        padding-top: 1em;
+    }
+
+    .head {
+        /* border: 2px solid red; */
+        height: 2em;
+    }
+    
+    .calculator {
+        /* border: 2px solid green; */
+        flex-direction: column;
+        align-items: center;
+        gap: 1em;
+        height: 40em;
+        width: 100vw;
+    }
+    
+    .bodyLeft {
+        /* border: 2px solid red; */
+        width: 80%;
+        gap: 1em;
+    }
+    
+    button,
+    input#custom {
+        width: 45%;
+        height: 3em;
+    }
+    
+    .bodyRight {
+        /* border: 2px solid green; */
+        width: 80%;
+    }
+    
+    .calculated {
+        /* border: 2px solid white; */
+        padding-top: 0.5em;
+        padding-bottom: 0.5em;
+    }
+    
+    .resetButton {
+        /* background-color: #0d686d; disabled */
+        height: 20%;
+        margin-top: 1em;
+        margin-bottom: 0.2em;
+    }
+}
